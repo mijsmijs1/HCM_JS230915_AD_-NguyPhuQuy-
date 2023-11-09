@@ -25,7 +25,7 @@ function App() {
   useEffect(
     () => {
       const cart = JSON.parse(localStorage.getItem('cart') ?? '[]')
-      const totalOfCart = cart.reduce((total, item) => total + item.quantity, 0);
+      const totalOfCart = cart.reduce((total, item) => total + 1, 0);
       setTotal(totalOfCart)
       setCart(JSON.parse(localStorage.getItem('cart') ?? '[]'))
     }
